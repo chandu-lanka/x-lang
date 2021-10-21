@@ -133,6 +133,14 @@ class Lexer:
         else:
             return Token(X_FLOAT, float(num_str))
 
+## Nodes ##
+class NumberNode:
+    def __init__(self, tok):
+        self.tok = tok
+
+    def __repr__(self):
+        return f'{self.tok}'
+
 def run(file_name, text):
     lexer = Lexer(file_name, text)
     tokens, error = lexer.make_tokens()
