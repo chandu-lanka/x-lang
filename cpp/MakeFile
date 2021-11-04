@@ -1,0 +1,2 @@
+all:
+	g++ -Iinclude -o x_lang src/*.cpp
